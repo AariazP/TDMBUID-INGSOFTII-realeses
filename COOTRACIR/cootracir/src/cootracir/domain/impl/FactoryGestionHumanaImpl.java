@@ -1,0 +1,470 @@
+/**
+ */
+package cootracir.domain.impl;
+
+import cootracir.domain.Analista;
+import cootracir.domain.Cajero;
+import cootracir.domain.Conductor;
+import cootracir.domain.Domain;
+import cootracir.domain.DomainPackage;
+import cootracir.domain.FactoryGestionHumana;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Factory Gestion Humana</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getLstAnalistas <em>Lst Analistas</em>}</li>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getLstCajeros <em>Lst Cajeros</em>}</li>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getLstConductores <em>Lst Conductores</em>}</li>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getEstado <em>Estado</em>}</li>
+ *   <li>{@link cootracir.domain.impl.FactoryGestionHumanaImpl#getDomain <em>Domain</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class FactoryGestionHumanaImpl extends EObjectImpl implements FactoryGestionHumana {
+	/**
+	 * The cached value of the '{@link #getLstAnalistas() <em>Lst Analistas</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstAnalistas()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Analista> lstAnalistas;
+
+	/**
+	 * The cached value of the '{@link #getLstCajeros() <em>Lst Cajeros</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstCajeros()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Cajero> lstCajeros;
+
+	/**
+	 * The cached value of the '{@link #getLstConductores() <em>Lst Conductores</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstConductores()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Conductor> lstConductores;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEstado() <em>Estado</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstado()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ESTADO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEstado() <em>Estado</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstado()
+	 * @generated
+	 * @ordered
+	 */
+	protected String estado = ESTADO_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FactoryGestionHumanaImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DomainPackage.Literals.FACTORY_GESTION_HUMANA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Analista> getLstAnalistas() {
+		if (lstAnalistas == null) {
+			lstAnalistas = new EObjectContainmentWithInverseEList<Analista>(Analista.class, this, DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS, DomainPackage.ANALISTA__FACTORY_GESTION_HUMANA);
+		}
+		return lstAnalistas;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Cajero> getLstCajeros() {
+		if (lstCajeros == null) {
+			lstCajeros = new EObjectContainmentWithInverseEList<Cajero>(Cajero.class, this, DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS, DomainPackage.CAJERO__FACTORY_GESTION_HUMANA);
+		}
+		return lstCajeros;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Conductor> getLstConductores() {
+		if (lstConductores == null) {
+			lstConductores = new EObjectContainmentWithInverseEList<Conductor>(Conductor.class, this, DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES, DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA);
+		}
+		return lstConductores;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.FACTORY_GESTION_HUMANA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEstado() {
+		return estado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEstado(String newEstado) {
+		String oldEstado = estado;
+		estado = newEstado;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.FACTORY_GESTION_HUMANA__ESTADO, oldEstado, estado));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Domain getDomain() {
+		if (eContainerFeatureID() != DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN) return null;
+		return (Domain)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDomain(Domain newDomain, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newDomain, DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDomain(Domain newDomain) {
+		if (newDomain != eInternalContainer() || (eContainerFeatureID() != DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN && newDomain != null)) {
+			if (EcoreUtil.isAncestor(this, newDomain))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newDomain != null)
+				msgs = ((InternalEObject)newDomain).eInverseAdd(this, DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA, Domain.class, msgs);
+			msgs = basicSetDomain(newDomain, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN, newDomain, newDomain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstAnalistas()).basicAdd(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstCajeros()).basicAdd(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstConductores()).basicAdd(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetDomain((Domain)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				return ((InternalEList<?>)getLstAnalistas()).basicRemove(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				return ((InternalEList<?>)getLstCajeros()).basicRemove(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				return ((InternalEList<?>)getLstConductores()).basicRemove(otherEnd, msgs);
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				return basicSetDomain(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA, Domain.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				return getLstAnalistas();
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				return getLstCajeros();
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				return getLstConductores();
+			case DomainPackage.FACTORY_GESTION_HUMANA__ID:
+				return getId();
+			case DomainPackage.FACTORY_GESTION_HUMANA__ESTADO:
+				return getEstado();
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				return getDomain();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				getLstAnalistas().clear();
+				getLstAnalistas().addAll((Collection<? extends Analista>)newValue);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				getLstCajeros().clear();
+				getLstCajeros().addAll((Collection<? extends Cajero>)newValue);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				getLstConductores().clear();
+				getLstConductores().addAll((Collection<? extends Conductor>)newValue);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__ID:
+				setId((String)newValue);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__ESTADO:
+				setEstado((String)newValue);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				setDomain((Domain)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				getLstAnalistas().clear();
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				getLstCajeros().clear();
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				getLstConductores().clear();
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__ESTADO:
+				setEstado(ESTADO_EDEFAULT);
+				return;
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				setDomain((Domain)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_ANALISTAS:
+				return lstAnalistas != null && !lstAnalistas.isEmpty();
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CAJEROS:
+				return lstCajeros != null && !lstCajeros.isEmpty();
+			case DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES:
+				return lstConductores != null && !lstConductores.isEmpty();
+			case DomainPackage.FACTORY_GESTION_HUMANA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DomainPackage.FACTORY_GESTION_HUMANA__ESTADO:
+				return ESTADO_EDEFAULT == null ? estado != null : !ESTADO_EDEFAULT.equals(estado);
+			case DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN:
+				return getDomain() != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", estado: ");
+		result.append(estado);
+		result.append(')');
+		return result.toString();
+	}
+	@Override
+	public Cajero getCajeroActivo() {
+
+		for(Cajero cajero: lstCajeros) {
+			if(cajero.getEstado().equalsIgnoreCase("activo")) return cajero;
+		}
+		
+		
+		return null;
+	}
+
+	@Override
+	public ConductorImpl getConductorID(String idConductor) {
+		for(Conductor c: lstConductores) {
+			
+			if(c.getId().equals(idConductor)) return (ConductorImpl) c;
+			
+		}
+		
+		
+		return null;
+	}
+
+	@Override
+	public String aplicarPromedio(ConductorImpl conductorImpl) {
+		return null;
+	}
+
+} //FactoryGestionHumanaImpl

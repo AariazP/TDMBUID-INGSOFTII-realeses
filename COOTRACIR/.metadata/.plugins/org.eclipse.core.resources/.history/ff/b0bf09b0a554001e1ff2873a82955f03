@@ -1,0 +1,207 @@
+/**
+ */
+package cootracir.domain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+import cootracir.domain.impl.LiquidacionImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Factory Gestion Inventario</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getLstBuses <em>Lst Buses</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getLstDetalleRegistro <em>Lst Detalle Registro</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getId <em>Id</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getEstado <em>Estado</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getDomain <em>Domain</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getLstLiquidaciones <em>Lst Liquidaciones</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getLstRegistrador <em>Lst Registrador</em>}</li>
+ *   <li>{@link cootracir.domain.FactoryGestionInventario#getLstRuta <em>Lst Ruta</em>}</li>
+ * </ul>
+ *
+ * @see cootracir.domain.DomainPackage#getFactoryGestionInventario()
+ * @model
+ * @generated
+ */
+public interface FactoryGestionInventario extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Lst Buses</b></em>' containment reference list.
+	 * The list contents are of type {@link cootracir.domain.Bus}.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.Bus#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Buses</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Buses</em>' containment reference list.
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_LstBuses()
+	 * @see cootracir.domain.Bus#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" containment="true"
+	 * @generated
+	 */
+	EList<Bus> getLstBuses();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Detalle Registro</b></em>' containment reference list.
+	 * The list contents are of type {@link cootracir.domain.DetalleRegistro}.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.DetalleRegistro#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Detalle Registro</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Detalle Registro</em>' containment reference list.
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_LstDetalleRegistro()
+	 * @see cootracir.domain.DetalleRegistro#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" containment="true"
+	 * @generated
+	 */
+	EList<DetalleRegistro> getLstDetalleRegistro();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_Id()
+	 * @model dataType="cootracir.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link cootracir.domain.FactoryGestionInventario#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Estado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Estado</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Estado</em>' attribute.
+	 * @see #setEstado(String)
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_Estado()
+	 * @model dataType="cootracir.String"
+	 * @generated
+	 */
+	String getEstado();
+
+	/**
+	 * Sets the value of the '{@link cootracir.domain.FactoryGestionInventario#getEstado <em>Estado</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Estado</em>' attribute.
+	 * @see #getEstado()
+	 * @generated
+	 */
+	void setEstado(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.Domain#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Domain</em>' container reference.
+	 * @see #setDomain(Domain)
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_Domain()
+	 * @see cootracir.domain.Domain#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" transient="false"
+	 * @generated
+	 */
+	Domain getDomain();
+
+	/**
+	 * Sets the value of the '{@link cootracir.domain.FactoryGestionInventario#getDomain <em>Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Domain</em>' container reference.
+	 * @see #getDomain()
+	 * @generated
+	 */
+	void setDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Liquidaciones</b></em>' containment reference list.
+	 * The list contents are of type {@link cootracir.domain.Liquidacion}.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.Liquidacion#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Liquidaciones</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Liquidaciones</em>' containment reference list.
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_LstLiquidaciones()
+	 * @see cootracir.domain.Liquidacion#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" containment="true"
+	 * @generated
+	 */
+	EList<Liquidacion> getLstLiquidaciones();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Registrador</b></em>' containment reference list.
+	 * The list contents are of type {@link cootracir.domain.Registrador}.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.Registrador#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Registrador</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Registrador</em>' containment reference list.
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_LstRegistrador()
+	 * @see cootracir.domain.Registrador#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" containment="true"
+	 * @generated
+	 */
+	EList<Registrador> getLstRegistrador();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Ruta</b></em>' containment reference list.
+	 * The list contents are of type {@link cootracir.domain.Ruta}.
+	 * It is bidirectional and its opposite is '{@link cootracir.domain.Ruta#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Ruta</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Ruta</em>' containment reference list.
+	 * @see cootracir.domain.DomainPackage#getFactoryGestionInventario_LstRuta()
+	 * @see cootracir.domain.Ruta#getFactoryGestionInventario
+	 * @model opposite="factoryGestionInventario" containment="true"
+	 * @generated
+	 */
+	EList<Ruta> getLstRuta();
+
+	void addLiquidacion(LiquidacionImpl liquidacionImpl);
+
+} // FactoryGestionInventario

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cootracir -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cootracir.presentation.cootracirModelWizardID"
+            name="%_UI_cootracirModelWizard_label"
+            class="cootracir.presentation.cootracirModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/cootracirModelFile.gif">
+         <description>%_UI_cootracirModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cootracir -->
+      <editor
+            id="cootracir.presentation.cootracirEditorID"
+            name="%_UI_cootracirEditor_label"
+            icon="icons/full/obj16/cootracirModelFile.gif"
+            extensions="cootracir"
+            class="cootracir.presentation.cootracirEditor"
+            contributorClass="cootracir.presentation.cootracirActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cootracir -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cootracir.domain.presentation.DomainModelWizardID"
+            name="%_UI_DomainModelWizard_label"
+            class="cootracir.domain.presentation.DomainModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DomainModelFile.gif">
+         <description>%_UI_DomainModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cootracir -->
+      <editor
+            id="cootracir.domain.presentation.DomainEditorID"
+            name="%_UI_DomainEditor_label"
+            icon="icons/full/obj16/DomainModelFile.gif"
+            extensions="domain"
+            class="cootracir.domain.presentation.DomainEditor"
+            contributorClass="cootracir.domain.presentation.DomainActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cootracir -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cootracir.domain.main1.presentation.Main1ModelWizardID"
+            name="%_UI_Main1ModelWizard_label"
+            class="cootracir.domain.main1.presentation.Main1ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Main1ModelFile.gif">
+         <description>%_UI_Main1ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cootracir -->
+      <editor
+            id="cootracir.domain.main1.presentation.Main1EditorID"
+            name="%_UI_Main1Editor_label"
+            icon="icons/full/obj16/Main1ModelFile.gif"
+            extensions="main1"
+            class="cootracir.domain.main1.presentation.Main1Editor"
+            contributorClass="cootracir.domain.main1.presentation.Main1ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cootracir -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cootracir.ui.presentation.UiModelWizardID"
+            name="%_UI_UiModelWizard_label"
+            class="cootracir.ui.presentation.UiModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UiModelFile.gif">
+         <description>%_UI_UiModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cootracir -->
+      <editor
+            id="cootracir.ui.presentation.UiEditorID"
+            name="%_UI_UiEditor_label"
+            icon="icons/full/obj16/UiModelFile.gif"
+            extensions="ui"
+            class="cootracir.ui.presentation.UiEditor"
+            contributorClass="cootracir.ui.presentation.UiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cootracir -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.presentation.ContenedorregistrobaseviewmodelModelWizardID"
+            name="%_UI_ContenedorregistrobaseviewmodelModelWizard_label"
+            class="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.presentation.ContenedorregistrobaseviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorregistrobaseviewmodelModelFile.gif">
+         <description>%_UI_ContenedorregistrobaseviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cootracir -->
+      <editor
+            id="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.presentation.ContenedorregistrobaseviewmodelEditorID"
+            name="%_UI_ContenedorregistrobaseviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorregistrobaseviewmodelModelFile.gif"
+            extensions="contenedorregistrobaseviewmodel"
+            class="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.presentation.ContenedorregistrobaseviewmodelEditor"
+            contributorClass="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.presentation.ContenedorregistrobaseviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

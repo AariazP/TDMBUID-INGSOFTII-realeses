@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir.ecore"
+            class="cootracir.cootracirPackage"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir/domain.ecore"
+            class="cootracir.domain.DomainPackage"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir/domain/main1.ecore"
+            class="cootracir.domain.main1.Main1Package"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir/ui.ecore"
+            class="cootracir.ui.UiPackage"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir/ui/viewmodels.ecore"
+            class="cootracir.ui.viewmodels.ViewmodelsPackage"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cootracir -->
+      <package
+            uri="http:///cootracir/ui/viewmodels/contenedorregistrobaseviewmodel.ecore"
+            class="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.ContenedorregistrobaseviewmodelPackage"
+            genModel="model/cootracir.genmodel"/>
+   </extension>
+</plugin>

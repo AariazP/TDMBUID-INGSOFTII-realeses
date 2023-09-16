@@ -1,0 +1,873 @@
+/**
+ */
+package cootracir.domain.impl;
+
+import cootracir.domain.Analista;
+import cootracir.domain.Bus;
+import cootracir.domain.Cajero;
+import cootracir.domain.Conductor;
+import cootracir.domain.DomainPackage;
+import cootracir.domain.FactoryGestionHumana;
+import cootracir.domain.Liquidacion;
+
+import cootracir.domain.main1.Main1Package;
+import cootracir.domain.main1.Registrador;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Conductor</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getAnalista <em>Analista</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getCajero <em>Cajero</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getId <em>Id</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getTelefono <em>Telefono</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getEstado <em>Estado</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getBus <em>Bus</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getFactoryGestionHumana <em>Factory Gestion Humana</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getLstRegistrador <em>Lst Registrador</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getLstBus <em>Lst Bus</em>}</li>
+ *   <li>{@link cootracir.domain.impl.ConductorImpl#getLstLiquidaciones <em>Lst Liquidaciones</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ConductorImpl extends EObjectImpl implements Conductor {
+	/**
+	 * The cached value of the '{@link #getAnalista() <em>Analista</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnalista()
+	 * @generated
+	 * @ordered
+	 */
+	protected Analista analista;
+
+	/**
+	 * The cached value of the '{@link #getCajero() <em>Cajero</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCajero()
+	 * @generated
+	 * @ordered
+	 */
+	protected Cajero cajero;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTelefono() <em>Telefono</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTelefono()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TELEFONO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTelefono() <em>Telefono</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTelefono()
+	 * @generated
+	 * @ordered
+	 */
+	protected String telefono = TELEFONO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EMAIL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String email = EMAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEstado() <em>Estado</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstado()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ESTADO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEstado() <em>Estado</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstado()
+	 * @generated
+	 * @ordered
+	 */
+	protected String estado = ESTADO_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBus() <em>Bus</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBus()
+	 * @generated
+	 * @ordered
+	 */
+	protected Bus bus;
+
+	/**
+	 * The cached value of the '{@link #getLstRegistrador() <em>Lst Registrador</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstRegistrador()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Registrador> lstRegistrador;
+
+	/**
+	 * The cached value of the '{@link #getLstBus() <em>Lst Bus</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstBus()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<cootracir.domain.main1.Bus> lstBus;
+
+	/**
+	 * The cached value of the '{@link #getLstLiquidaciones() <em>Lst Liquidaciones</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstLiquidaciones()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Liquidacion> lstLiquidaciones;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConductorImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DomainPackage.Literals.CONDUCTOR;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Analista getAnalista() {
+		if (analista != null && analista.eIsProxy()) {
+			InternalEObject oldAnalista = (InternalEObject)analista;
+			analista = (Analista)eResolveProxy(oldAnalista);
+			if (analista != oldAnalista) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.CONDUCTOR__ANALISTA, oldAnalista, analista));
+			}
+		}
+		return analista;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Analista basicGetAnalista() {
+		return analista;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAnalista(Analista newAnalista, NotificationChain msgs) {
+		Analista oldAnalista = analista;
+		analista = newAnalista;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__ANALISTA, oldAnalista, newAnalista);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAnalista(Analista newAnalista) {
+		if (newAnalista != analista) {
+			NotificationChain msgs = null;
+			if (analista != null)
+				msgs = ((InternalEObject)analista).eInverseRemove(this, DomainPackage.ANALISTA__LST_CONDUCTORES, Analista.class, msgs);
+			if (newAnalista != null)
+				msgs = ((InternalEObject)newAnalista).eInverseAdd(this, DomainPackage.ANALISTA__LST_CONDUCTORES, Analista.class, msgs);
+			msgs = basicSetAnalista(newAnalista, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__ANALISTA, newAnalista, newAnalista));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cajero getCajero() {
+		if (cajero != null && cajero.eIsProxy()) {
+			InternalEObject oldCajero = (InternalEObject)cajero;
+			cajero = (Cajero)eResolveProxy(oldCajero);
+			if (cajero != oldCajero) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.CONDUCTOR__CAJERO, oldCajero, cajero));
+			}
+		}
+		return cajero;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cajero basicGetCajero() {
+		return cajero;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCajero(Cajero newCajero, NotificationChain msgs) {
+		Cajero oldCajero = cajero;
+		cajero = newCajero;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__CAJERO, oldCajero, newCajero);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCajero(Cajero newCajero) {
+		if (newCajero != cajero) {
+			NotificationChain msgs = null;
+			if (cajero != null)
+				msgs = ((InternalEObject)cajero).eInverseRemove(this, DomainPackage.CAJERO__LST_CONDUCTORES, Cajero.class, msgs);
+			if (newCajero != null)
+				msgs = ((InternalEObject)newCajero).eInverseAdd(this, DomainPackage.CAJERO__LST_CONDUCTORES, Cajero.class, msgs);
+			msgs = basicSetCajero(newCajero, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__CAJERO, newCajero, newCajero));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTelefono() {
+		return telefono;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTelefono(String newTelefono) {
+		String oldTelefono = telefono;
+		telefono = newTelefono;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__TELEFONO, oldTelefono, telefono));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEmail(String newEmail) {
+		String oldEmail = email;
+		email = newEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__EMAIL, oldEmail, email));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEstado() {
+		return estado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEstado(String newEstado) {
+		String oldEstado = estado;
+		estado = newEstado;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__ESTADO, oldEstado, estado));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bus getBus() {
+		if (bus != null && bus.eIsProxy()) {
+			InternalEObject oldBus = (InternalEObject)bus;
+			bus = (Bus)eResolveProxy(oldBus);
+			if (bus != oldBus) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.CONDUCTOR__BUS, oldBus, bus));
+			}
+		}
+		return bus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bus basicGetBus() {
+		return bus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBus(Bus newBus, NotificationChain msgs) {
+		Bus oldBus = bus;
+		bus = newBus;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__BUS, oldBus, newBus);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBus(Bus newBus) {
+		if (newBus != bus) {
+			NotificationChain msgs = null;
+			if (bus != null)
+				msgs = ((InternalEObject)bus).eInverseRemove(this, DomainPackage.BUS__CONDUCTOR, Bus.class, msgs);
+			if (newBus != null)
+				msgs = ((InternalEObject)newBus).eInverseAdd(this, DomainPackage.BUS__CONDUCTOR, Bus.class, msgs);
+			msgs = basicSetBus(newBus, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__BUS, newBus, newBus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryGestionHumana getFactoryGestionHumana() {
+		if (eContainerFeatureID() != DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA) return null;
+		return (FactoryGestionHumana)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFactoryGestionHumana(FactoryGestionHumana newFactoryGestionHumana, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newFactoryGestionHumana, DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFactoryGestionHumana(FactoryGestionHumana newFactoryGestionHumana) {
+		if (newFactoryGestionHumana != eInternalContainer() || (eContainerFeatureID() != DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA && newFactoryGestionHumana != null)) {
+			if (EcoreUtil.isAncestor(this, newFactoryGestionHumana))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newFactoryGestionHumana != null)
+				msgs = ((InternalEObject)newFactoryGestionHumana).eInverseAdd(this, DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES, FactoryGestionHumana.class, msgs);
+			msgs = basicSetFactoryGestionHumana(newFactoryGestionHumana, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA, newFactoryGestionHumana, newFactoryGestionHumana));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Registrador> getLstRegistrador() {
+		if (lstRegistrador == null) {
+			lstRegistrador = new EObjectWithInverseResolvingEList.ManyInverse<Registrador>(Registrador.class, this, DomainPackage.CONDUCTOR__LST_REGISTRADOR, Main1Package.REGISTRADOR__LST_CONDUCTOR);
+		}
+		return lstRegistrador;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<cootracir.domain.main1.Bus> getLstBus() {
+		if (lstBus == null) {
+			lstBus = new EObjectWithInverseResolvingEList.ManyInverse<cootracir.domain.main1.Bus>(cootracir.domain.main1.Bus.class, this, DomainPackage.CONDUCTOR__LST_BUS, Main1Package.BUS__LST_CONDUCTOR);
+		}
+		return lstBus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Liquidacion> getLstLiquidaciones() {
+		if (lstLiquidaciones == null) {
+			lstLiquidaciones = new EObjectWithInverseResolvingEList<Liquidacion>(Liquidacion.class, this, DomainPackage.CONDUCTOR__LST_LIQUIDACIONES, DomainPackage.LIQUIDACION__CONDUCTOR);
+		}
+		return lstLiquidaciones;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				if (analista != null)
+					msgs = ((InternalEObject)analista).eInverseRemove(this, DomainPackage.ANALISTA__LST_CONDUCTORES, Analista.class, msgs);
+				return basicSetAnalista((Analista)otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__CAJERO:
+				if (cajero != null)
+					msgs = ((InternalEObject)cajero).eInverseRemove(this, DomainPackage.CAJERO__LST_CONDUCTORES, Cajero.class, msgs);
+				return basicSetCajero((Cajero)otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__BUS:
+				if (bus != null)
+					msgs = ((InternalEObject)bus).eInverseRemove(this, DomainPackage.BUS__CONDUCTOR, Bus.class, msgs);
+				return basicSetBus((Bus)otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetFactoryGestionHumana((FactoryGestionHumana)otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstRegistrador()).basicAdd(otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstBus()).basicAdd(otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstLiquidaciones()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				return basicSetAnalista(null, msgs);
+			case DomainPackage.CONDUCTOR__CAJERO:
+				return basicSetCajero(null, msgs);
+			case DomainPackage.CONDUCTOR__BUS:
+				return basicSetBus(null, msgs);
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				return basicSetFactoryGestionHumana(null, msgs);
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				return ((InternalEList<?>)getLstRegistrador()).basicRemove(otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				return ((InternalEList<?>)getLstBus()).basicRemove(otherEnd, msgs);
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				return ((InternalEList<?>)getLstLiquidaciones()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.FACTORY_GESTION_HUMANA__LST_CONDUCTORES, FactoryGestionHumana.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				if (resolve) return getAnalista();
+				return basicGetAnalista();
+			case DomainPackage.CONDUCTOR__CAJERO:
+				if (resolve) return getCajero();
+				return basicGetCajero();
+			case DomainPackage.CONDUCTOR__NOMBRE:
+				return getNombre();
+			case DomainPackage.CONDUCTOR__ID:
+				return getId();
+			case DomainPackage.CONDUCTOR__TELEFONO:
+				return getTelefono();
+			case DomainPackage.CONDUCTOR__EMAIL:
+				return getEmail();
+			case DomainPackage.CONDUCTOR__ESTADO:
+				return getEstado();
+			case DomainPackage.CONDUCTOR__BUS:
+				if (resolve) return getBus();
+				return basicGetBus();
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				return getFactoryGestionHumana();
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				return getLstRegistrador();
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				return getLstBus();
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				return getLstLiquidaciones();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				setAnalista((Analista)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__CAJERO:
+				setCajero((Cajero)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__ID:
+				setId((String)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__TELEFONO:
+				setTelefono((String)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__EMAIL:
+				setEmail((String)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__ESTADO:
+				setEstado((String)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__BUS:
+				setBus((Bus)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				setFactoryGestionHumana((FactoryGestionHumana)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				getLstRegistrador().clear();
+				getLstRegistrador().addAll((Collection<? extends Registrador>)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				getLstBus().clear();
+				getLstBus().addAll((Collection<? extends cootracir.domain.main1.Bus>)newValue);
+				return;
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				getLstLiquidaciones().clear();
+				getLstLiquidaciones().addAll((Collection<? extends Liquidacion>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				setAnalista((Analista)null);
+				return;
+			case DomainPackage.CONDUCTOR__CAJERO:
+				setCajero((Cajero)null);
+				return;
+			case DomainPackage.CONDUCTOR__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case DomainPackage.CONDUCTOR__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case DomainPackage.CONDUCTOR__TELEFONO:
+				setTelefono(TELEFONO_EDEFAULT);
+				return;
+			case DomainPackage.CONDUCTOR__EMAIL:
+				setEmail(EMAIL_EDEFAULT);
+				return;
+			case DomainPackage.CONDUCTOR__ESTADO:
+				setEstado(ESTADO_EDEFAULT);
+				return;
+			case DomainPackage.CONDUCTOR__BUS:
+				setBus((Bus)null);
+				return;
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				setFactoryGestionHumana((FactoryGestionHumana)null);
+				return;
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				getLstRegistrador().clear();
+				return;
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				getLstBus().clear();
+				return;
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				getLstLiquidaciones().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DomainPackage.CONDUCTOR__ANALISTA:
+				return analista != null;
+			case DomainPackage.CONDUCTOR__CAJERO:
+				return cajero != null;
+			case DomainPackage.CONDUCTOR__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case DomainPackage.CONDUCTOR__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DomainPackage.CONDUCTOR__TELEFONO:
+				return TELEFONO_EDEFAULT == null ? telefono != null : !TELEFONO_EDEFAULT.equals(telefono);
+			case DomainPackage.CONDUCTOR__EMAIL:
+				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
+			case DomainPackage.CONDUCTOR__ESTADO:
+				return ESTADO_EDEFAULT == null ? estado != null : !ESTADO_EDEFAULT.equals(estado);
+			case DomainPackage.CONDUCTOR__BUS:
+				return bus != null;
+			case DomainPackage.CONDUCTOR__FACTORY_GESTION_HUMANA:
+				return getFactoryGestionHumana() != null;
+			case DomainPackage.CONDUCTOR__LST_REGISTRADOR:
+				return lstRegistrador != null && !lstRegistrador.isEmpty();
+			case DomainPackage.CONDUCTOR__LST_BUS:
+				return lstBus != null && !lstBus.isEmpty();
+			case DomainPackage.CONDUCTOR__LST_LIQUIDACIONES:
+				return lstLiquidaciones != null && !lstLiquidaciones.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nombre: ");
+		result.append(nombre);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", telefono: ");
+		result.append(telefono);
+		result.append(", email: ");
+		result.append(email);
+		result.append(", estado: ");
+		result.append(estado);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ConductorImpl

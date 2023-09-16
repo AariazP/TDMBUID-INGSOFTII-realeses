@@ -1,0 +1,506 @@
+/**
+ */
+package cootracir.domain.impl;
+
+import cootracir.ModelFactory;
+import cootracir.cootracirPackage;
+
+import cootracir.domain.Domain;
+import cootracir.domain.DomainPackage;
+import cootracir.domain.FactoryGestionHumana;
+import cootracir.domain.FactoryGestionInventario;
+
+import cootracir.ui.UI;
+import cootracir.ui.UiPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Domain</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link cootracir.domain.impl.DomainImpl#getTheModelFactory <em>The Model Factory</em>}</li>
+ *   <li>{@link cootracir.domain.impl.DomainImpl#getFactoryGestionHumana <em>Factory Gestion Humana</em>}</li>
+ *   <li>{@link cootracir.domain.impl.DomainImpl#getFactoryGestionInventario <em>Factory Gestion Inventario</em>}</li>
+ *   <li>{@link cootracir.domain.impl.DomainImpl#getTheUI <em>The UI</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DomainImpl extends EObjectImpl implements Domain {
+	/**
+	 * The cached value of the '{@link #getFactoryGestionHumana() <em>Factory Gestion Humana</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFactoryGestionHumana()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryGestionHumana factoryGestionHumana;
+
+	/**
+	 * The cached value of the '{@link #getFactoryGestionInventario() <em>Factory Gestion Inventario</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFactoryGestionInventario()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryGestionInventario factoryGestionInventario;
+
+	/**
+	 * The cached value of the '{@link #getTheUI() <em>The UI</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheUI()
+	 * @generated
+	 * @ordered
+	 */
+	protected UI theUI;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DomainPackage.Literals.DOMAIN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelFactory getTheModelFactory() {
+		if (eContainerFeatureID() != DomainPackage.DOMAIN__THE_MODEL_FACTORY) return null;
+		return (ModelFactory)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheModelFactory(ModelFactory newTheModelFactory, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newTheModelFactory, DomainPackage.DOMAIN__THE_MODEL_FACTORY, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheModelFactory(ModelFactory newTheModelFactory) {
+		if (newTheModelFactory != eInternalContainer() || (eContainerFeatureID() != DomainPackage.DOMAIN__THE_MODEL_FACTORY && newTheModelFactory != null)) {
+			if (EcoreUtil.isAncestor(this, newTheModelFactory))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newTheModelFactory != null)
+				msgs = ((InternalEObject)newTheModelFactory).eInverseAdd(this, cootracirPackage.MODEL_FACTORY__THE_DOMAIN, ModelFactory.class, msgs);
+			msgs = basicSetTheModelFactory(newTheModelFactory, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_MODEL_FACTORY, newTheModelFactory, newTheModelFactory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryGestionHumana getFactoryGestionHumana() {
+		return factoryGestionHumana;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFactoryGestionHumana(FactoryGestionHumana newFactoryGestionHumana, NotificationChain msgs) {
+		FactoryGestionHumana oldFactoryGestionHumana = factoryGestionHumana;
+		factoryGestionHumana = newFactoryGestionHumana;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA, oldFactoryGestionHumana, newFactoryGestionHumana);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFactoryGestionHumana(FactoryGestionHumana newFactoryGestionHumana) {
+		if (newFactoryGestionHumana != factoryGestionHumana) {
+			NotificationChain msgs = null;
+			if (factoryGestionHumana != null)
+				msgs = ((InternalEObject)factoryGestionHumana).eInverseRemove(this, DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN, FactoryGestionHumana.class, msgs);
+			if (newFactoryGestionHumana != null)
+				msgs = ((InternalEObject)newFactoryGestionHumana).eInverseAdd(this, DomainPackage.FACTORY_GESTION_HUMANA__DOMAIN, FactoryGestionHumana.class, msgs);
+			msgs = basicSetFactoryGestionHumana(newFactoryGestionHumana, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA, newFactoryGestionHumana, newFactoryGestionHumana));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryGestionInventario getFactoryGestionInventario() {
+		return factoryGestionInventario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFactoryGestionInventario(FactoryGestionInventario newFactoryGestionInventario, NotificationChain msgs) {
+		FactoryGestionInventario oldFactoryGestionInventario = factoryGestionInventario;
+		factoryGestionInventario = newFactoryGestionInventario;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO, oldFactoryGestionInventario, newFactoryGestionInventario);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFactoryGestionInventario(FactoryGestionInventario newFactoryGestionInventario) {
+		if (newFactoryGestionInventario != factoryGestionInventario) {
+			NotificationChain msgs = null;
+			if (factoryGestionInventario != null)
+				msgs = ((InternalEObject)factoryGestionInventario).eInverseRemove(this, DomainPackage.FACTORY_GESTION_INVENTARIO__DOMAIN, FactoryGestionInventario.class, msgs);
+			if (newFactoryGestionInventario != null)
+				msgs = ((InternalEObject)newFactoryGestionInventario).eInverseAdd(this, DomainPackage.FACTORY_GESTION_INVENTARIO__DOMAIN, FactoryGestionInventario.class, msgs);
+			msgs = basicSetFactoryGestionInventario(newFactoryGestionInventario, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO, newFactoryGestionInventario, newFactoryGestionInventario));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UI getTheUI() {
+		if (theUI != null && theUI.eIsProxy()) {
+			InternalEObject oldTheUI = (InternalEObject)theUI;
+			theUI = (UI)eResolveProxy(oldTheUI);
+			if (theUI != oldTheUI) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.DOMAIN__THE_UI, oldTheUI, theUI));
+			}
+		}
+		return theUI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UI basicGetTheUI() {
+		return theUI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheUI(UI newTheUI, NotificationChain msgs) {
+		UI oldTheUI = theUI;
+		theUI = newTheUI;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_UI, oldTheUI, newTheUI);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheUI(UI newTheUI) {
+		if (newTheUI != theUI) {
+			NotificationChain msgs = null;
+			if (theUI != null)
+				msgs = ((InternalEObject)theUI).eInverseRemove(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+			if (newTheUI != null)
+				msgs = ((InternalEObject)newTheUI).eInverseAdd(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+			msgs = basicSetTheUI(newTheUI, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_UI, newTheUI, newTheUI));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void implementarModelo() {
+		//TODO implementarModelo
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetTheModelFactory((ModelFactory)otherEnd, msgs);
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				if (factoryGestionHumana != null)
+					msgs = ((InternalEObject)factoryGestionHumana).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA, null, msgs);
+				return basicSetFactoryGestionHumana((FactoryGestionHumana)otherEnd, msgs);
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				if (factoryGestionInventario != null)
+					msgs = ((InternalEObject)factoryGestionInventario).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO, null, msgs);
+				return basicSetFactoryGestionInventario((FactoryGestionInventario)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_UI:
+				if (theUI != null)
+					msgs = ((InternalEObject)theUI).eInverseRemove(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+				return basicSetTheUI((UI)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return basicSetTheModelFactory(null, msgs);
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				return basicSetFactoryGestionHumana(null, msgs);
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				return basicSetFactoryGestionInventario(null, msgs);
+			case DomainPackage.DOMAIN__THE_UI:
+				return basicSetTheUI(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return eInternalContainer().eInverseRemove(this, cootracirPackage.MODEL_FACTORY__THE_DOMAIN, ModelFactory.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return getTheModelFactory();
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				return getFactoryGestionHumana();
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				return getFactoryGestionInventario();
+			case DomainPackage.DOMAIN__THE_UI:
+				if (resolve) return getTheUI();
+				return basicGetTheUI();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				setTheModelFactory((ModelFactory)newValue);
+				return;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				setFactoryGestionHumana((FactoryGestionHumana)newValue);
+				return;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				setFactoryGestionInventario((FactoryGestionInventario)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_UI:
+				setTheUI((UI)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				setTheModelFactory((ModelFactory)null);
+				return;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				setFactoryGestionHumana((FactoryGestionHumana)null);
+				return;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				setFactoryGestionInventario((FactoryGestionInventario)null);
+				return;
+			case DomainPackage.DOMAIN__THE_UI:
+				setTheUI((UI)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return getTheModelFactory() != null;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_HUMANA:
+				return factoryGestionHumana != null;
+			case DomainPackage.DOMAIN__FACTORY_GESTION_INVENTARIO:
+				return factoryGestionInventario != null;
+			case DomainPackage.DOMAIN__THE_UI:
+				return theUI != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+
+	@Override
+	public EList<Ruta> getRutas() {
+		return getFactoryGestionInventario().getLstRuta();
+	}
+
+	@Override
+	public ConductorImpl getConductorID(String idConductor) {
+		return getFactoryGestionHumana().getConductorID(idConductor);
+	}
+
+	@Override
+	public String aplicarPromedio(ConductorImpl conductorImpl) {
+		double promedio = getFactoryGestionInventario().getPromedio();
+		LiquidacionImpl liquidacionImpl = new LiquidacionImpl();
+		liquidacionImpl.setConductor(conductorImpl);
+		liquidacionImpl.setEstado("NUEVA");
+		liquidacionImpl.setId(UUID.randomUUID().toString());
+		liquidacionImpl.setValorLiquidacion(promedio+"");
+		getFactoryGestionInventario().addLiquidacion(liquidacionImpl);
+		Cajero cajero = getFactoryGestionHumana().getCajeroActivo();
+		liquidacionImpl.setCajero(cajero);
+		double costes = promedio + promedio*.19;
+		liquidacionImpl.setCostes(costes+"");
+		conductorImpl.addLiquidacion(liquidacionImpl);
+		cajero.addLiquidacion(liquidacionImpl);
+		cajero.addConductor(conductorImpl);
+		Bus bus = conductorImpl.getBus();
+		bus.addLiquidacion(liquidacionImpl);
+		liquidacionImpl.addBus(bus);
+		return promedio+"";
+
+	}
+
+	@Override
+	public String hacerLiquidacion(ConductorImpl conductorImpl) {
+		
+		double valorLiquidacion = getFactoryGestionInventario().calcularLiquidacion(conductorImpl);
+		
+		
+		
+		
+		LiquidacionImpl liquidacionImpl = new LiquidacionImpl();
+		liquidacionImpl.setConductor(conductorImpl);
+		liquidacionImpl.setEstado("NUEVA");
+		liquidacionImpl.setId(UUID.randomUUID().toString());
+		liquidacionImpl.setValorLiquidacion(valorLiquidacion+"");
+		getFactoryGestionInventario().addLiquidacion(liquidacionImpl);
+		Cajero cajero = getFactoryGestionHumana().getCajeroActivo();
+		liquidacionImpl.setCajero(cajero);
+		double costes = valorLiquidacion + valorLiquidacion*.19;
+		liquidacionImpl.setCostes(costes+"");
+		conductorImpl.addLiquidacion(liquidacionImpl);
+		cajero.addLiquidacion(liquidacionImpl);
+		cajero.addConductor(conductorImpl);
+		Bus bus = conductorImpl.getBus();
+		bus.addLiquidacion(liquidacionImpl);
+		liquidacionImpl.addBus(bus);
+		return valorLiquidacion+"";
+		
+		
+		
+		
+	}
+
+} //DomainImpl

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cootracir" nsURI="http:///cootracir.ecore" nsPrefix="cootracir">
+  <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EBooleanObject" instanceClassName="java.lang.Boolean"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EDoubleObject" instanceClassName="java.lang.Double"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EIntegerObject" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EList" instanceClassName="org.eclipse.emf.common.util.EList"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EChar" instanceClassName="char"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ArrayList" instanceClassName="java.util.ArrayList"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
+    <eOperations name="cargar" eType="#//ModelFactory">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="ModelFactory modelFactory = null;&#xA;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xA;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xA;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xA;try {&#xA;resource.load(java.util.Collections.EMPTY_MAP);&#xA;modelFactory = (ModelFactory) resource.getContents().get(0);&#xA;} catch (java.io.IOException e) {&#xA;// TO-DO Auto-generated catch block&#xA;e.printStackTrace();&#xA;}&#xA;&#xA;return modelFactory;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="ruta" eType="#//String"/>
+    </eOperations>
+    <eOperations name="implementarModelo">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="//TODO implementarModelo&#xA;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="salvar">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="ModelFactory modelFactory = this;&#xA;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xA;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xA;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xA;resource.getContents().add(modelFactory);&#xA;try {&#xA;resource.save(java.util.Collections.EMPTY_MAP);&#xA;} catch (java.io.IOException e) {&#xA;// TO-DO Auto-generated catch block&#xA;e.printStackTrace();&#xA;}&#xA;&#xA;return;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="ruta" eType="#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theDomain" eType="#//domain/Domain"
+        containment="true" eOpposite="#//domain/Domain/theModelFactory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+        containment="true" eOpposite="#//ui/UI/theModelFactory"/>
+  </eClassifiers>
+  <eSubpackages name="domain" nsURI="http:///cootracir/domain.ecore" nsPrefix="cootracir.domain">
+    <eClassifiers xsi:type="ecore:EClass" name="Analista">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="telefono" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionHumana"
+          eType="#//domain/FactoryGestionHumana" eOpposite="#//domain/FactoryGestionHumana/lstAnalistas"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductores" upperBound="-1"
+          eType="#//domain/Conductor" eOpposite="#//domain/Conductor/analista"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bus">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroPuestos" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" eOpposite="#//domain/FactoryGestionInventario/lstBuses"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstLiquidacion" upperBound="-1"
+          eType="#//domain/Liquidacion" eOpposite="#//domain/Liquidacion/lstBus"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conductor" eType="#//domain/Conductor"
+          eOpposite="#//domain/Conductor/bus"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="registrador" eType="#//domain/Registrador"
+          eOpposite="#//domain/Registrador/bus"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" upperBound="-1"
+          eType="#//domain/Ruta" eOpposite="#//domain/Ruta/bus"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Cajero">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="telefono" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dineroRecibido" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionHumana"
+          eType="#//domain/FactoryGestionHumana" eOpposite="#//domain/FactoryGestionHumana/lstCajeros"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductores" upperBound="-1"
+          eType="#//domain/Conductor" eOpposite="#//domain/Conductor/cajero"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstLiquidaciones" upperBound="-1"
+          eType="#//domain/Liquidacion" eOpposite="#//domain/Liquidacion/cajero"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Conductor">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="analista" eType="#//domain/Analista"
+          eOpposite="#//domain/Analista/lstConductores"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cajero" eType="#//domain/Cajero"
+          eOpposite="#//domain/Cajero/lstConductores"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="telefono" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bus" eType="#//domain/Bus"
+          eOpposite="#//domain/Bus/conductor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionHumana"
+          eType="#//domain/FactoryGestionHumana" eOpposite="#//domain/FactoryGestionHumana/lstConductores"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstRegistrador" upperBound="-1"
+          eType="#//domain/main1/Registrador" eOpposite="#//domain/main1/Registrador/lstConductor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstBus" upperBound="-1"
+          eType="#//domain/main1/Bus" eOpposite="#//domain/main1/Bus/lstConductor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstLiquidaciones" upperBound="-1"
+          eType="#//domain/Liquidacion" eOpposite="#//domain/Liquidacion/conductor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DetalleRegistro">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lugar" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="incidencia" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="registrador" eType="#//domain/Registrador"
+          eOpposite="#//domain/Registrador/lstDetalleRegistros"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" eOpposite="#//domain/FactoryGestionInventario/lstDetalleRegistro"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ruta" eType="#//domain/Ruta"
+          eOpposite="#//domain/Ruta/lstDetalleRegistro"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Domain">
+      <eOperations name="implementarModelo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO implementarModelo&#xA;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
+          eOpposite="#//ModelFactory/theDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionHumana"
+          eType="#//domain/FactoryGestionHumana" containment="true" eOpposite="#//domain/FactoryGestionHumana/domain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" containment="true" eOpposite="#//domain/FactoryGestionInventario/domain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+          eOpposite="#//ui/UI/theDomain"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FactoryGestionHumana">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstAnalistas" upperBound="-1"
+          eType="#//domain/Analista" containment="true" eOpposite="#//domain/Analista/factoryGestionHumana"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstCajeros" upperBound="-1"
+          eType="#//domain/Cajero" containment="true" eOpposite="#//domain/Cajero/factoryGestionHumana"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductores" upperBound="-1"
+          eType="#//domain/Conductor" containment="true" eOpposite="#//domain/Conductor/factoryGestionHumana"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//domain/Domain"
+          eOpposite="#//domain/Domain/factoryGestionHumana"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FactoryGestionInventario">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstBuses" upperBound="-1"
+          eType="#//domain/Bus" containment="true" eOpposite="#//domain/Bus/factoryGestionInventario"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetalleRegistro" upperBound="-1"
+          eType="#//domain/DetalleRegistro" containment="true" eOpposite="#//domain/DetalleRegistro/factoryGestionInventario"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//domain/Domain"
+          eOpposite="#//domain/Domain/factoryGestionInventario"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstLiquidaciones" upperBound="-1"
+          eType="#//domain/Liquidacion" containment="true" eOpposite="#//domain/Liquidacion/factoryGestionInventario"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstRegistrador" upperBound="-1"
+          eType="#//domain/Registrador" containment="true" eOpposite="#//domain/Registrador/factoryGestionInventario"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" upperBound="-1"
+          eType="#//domain/Ruta" containment="true" eOpposite="#//domain/Ruta/factoryGestionInventario"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Liquidacion">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstBus" upperBound="-1"
+          eType="#//domain/Bus" eOpposite="#//domain/Bus/lstLiquidacion"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cajero" eType="#//domain/Cajero"
+          eOpposite="#//domain/Cajero/lstLiquidaciones"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conductor" eType="#//domain/Conductor"
+          eOpposite="#//domain/Conductor/lstLiquidaciones"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="costes" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorLiquidacion" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" eOpposite="#//domain/FactoryGestionInventario/lstLiquidaciones"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Registrador">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetalleRegistros"
+          upperBound="-1" eType="#//domain/DetalleRegistro" eOpposite="#//domain/DetalleRegistro/registrador"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bus" eType="#//domain/Bus"
+          eOpposite="#//domain/Bus/registrador"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" eOpposite="#//domain/FactoryGestionInventario/lstRegistrador"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Ruta">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetalleRegistro" upperBound="-1"
+          eType="#//domain/DetalleRegistro" eOpposite="#//domain/DetalleRegistro/ruta"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="precioRuta" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bus" eType="#//domain/Bus"
+          eOpposite="#//domain/Bus/lstRuta"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="factoryGestionInventario"
+          eType="#//domain/FactoryGestionInventario" eOpposite="#//domain/FactoryGestionInventario/lstRuta"/>
+    </eClassifiers>
+    <eSubpackages name="main1" nsURI="http:///cootracir/domain/main1.ecore" nsPrefix="cootracir.domain.main1">
+      <eClassifiers xsi:type="ecore:EClass" name="Bus">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductor" upperBound="-1"
+            eType="#//domain/Conductor" eOpposite="#//domain/Conductor/lstBus"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroPuestos" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" upperBound="-1"
+            eType="#//domain/main1/Ruta" eOpposite="#//domain/main1/Ruta/lstBus"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Ruta">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="precioRuta" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstBus" upperBound="-1"
+            eType="#//domain/main1/Bus" eOpposite="#//domain/main1/Bus/lstRuta"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Registrador">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductor" upperBound="-1"
+            eType="#//domain/Conductor" eOpposite="#//domain/Conductor/lstRegistrador"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetalleRegistro"
+            upperBound="-1" eType="#//domain/main1/DetalleRegistro" eOpposite="#//domain/main1/DetalleRegistro/lstRegistrador"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DetalleRegistro">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRegistrador" upperBound="-1"
+            eType="#//domain/main1/Registrador" eOpposite="#//domain/main1/Registrador/lstDetalleRegistro"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="lugar" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="incidencias" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="main2" nsURI="http:///cootracir/domain/main2.ecore" nsPrefix="cootracir.domain.main2"/>
+  </eSubpackages>
+  <eSubpackages name="ui" nsURI="http:///cootracir/ui.ecore" nsPrefix="cootracir.ui">
+    <eClassifiers xsi:type="ecore:EClass" name="UI">
+      <eOperations name="implementarModelo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO implementarModelo&#xA;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
+          eOpposite="#//ModelFactory/theUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theDomain" eType="#//domain/Domain"
+          eOpposite="#//domain/Domain/theUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstViewModels" upperBound="-1"
+          eType="#//ui/viewmodels/ViewModel" eOpposite="#//ui/viewmodels/ViewModel/theUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModel"
+          eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+          containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/ownedByUI"/>
+    </eClassifiers>
+    <eSubpackages name="viewmodels" nsURI="http:///cootracir/ui/viewmodels.ecore"
+        nsPrefix="cootracir.ui.viewmodels">
+      <eClassifiers xsi:type="ecore:EClass" name="ViewModel" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+            eOpposite="#//ui/UI/lstViewModels"/>
+      </eClassifiers>
+      <eSubpackages name="contenedorregistrobaseviewmodel" nsURI="http:///cootracir/ui/viewmodels/contenedorregistrobaseviewmodel.ecore"
+          nsPrefix="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel">
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorRegistroBaseViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
+              eOpposite="#//ui/UI/theContenedorRegistroBaseViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="notificacion" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="txtFiltrarrutasViewModel"
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaFiltrarrutasViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/ownedByContenedorRegistroBaseViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="filtrarrutasViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/theContenedorRegistroBaseViewModelFiltrarrutasViewModelFiltrarrutasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedFiltrarrutasViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/theContenedorRegistroBaseViewModelselectedFiltrarrutasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theInformaciongeneral"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/ownedByContenedorRegistroBaseViewModelTheInformaciongeneral"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theBusqueda" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/ownedByContenedorRegistroBaseViewModelTheBusqueda"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaRegistrosViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/ownedByContenedorRegistroBaseViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedRegistrosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/theContenedorRegistroBaseViewModelselectedRegistrosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="registrosViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/theContenedorRegistroBaseViewModelRegistrosViewModelRegistrosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaListapreciosViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/ownedByContenedorRegistroBaseViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedListapreciosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/theContenedorRegistroBaseViewModelselectedListapreciosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listapreciosViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/theContenedorRegistroBaseViewModelListapreciosViewModelListapreciosViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="FiltrarrutasViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroBaseViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaFiltrarrutasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelFiltrarrutasViewModelFiltrarrutasViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/filtrarrutasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelselectedFiltrarrutasViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedFiltrarrutasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorInformaciongeneralViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroBaseViewModelTheInformaciongeneral"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/theInformaciongeneral"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="fecha" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorBusquedaViewModel" eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroBaseViewModelTheBusqueda"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/theBusqueda"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="txtNombredelconductorViewModel"
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="txtRutadelconductorViewModel"
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaNombredelconductorViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/ownedContenedorBusquedaViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="nombredelconductorViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/theContenedorBusquedaViewModelNombredelconductorViewModelNombredelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedNombredelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/theContenedorBusquedaViewModelselectedNombredelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaRutadelconductorViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/ownedContenedorBusquedaViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="rutadelconductorViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/theContenedorBusquedaViewModelRutadelconductorViewModelRutadelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedRutadelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/theContenedorBusquedaViewModelselectedRutadelconductorViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="NombredelconductorViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedContenedorBusquedaViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/listaNombredelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorBusquedaViewModelNombredelconductorViewModelNombredelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/nombredelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorBusquedaViewModelselectedNombredelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/selectedNombredelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="RutadelconductorViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedContenedorBusquedaViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/listaRutadelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorBusquedaViewModelRutadelconductorViewModelRutadelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/rutadelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorBusquedaViewModelselectedRutadelconductorViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/selectedRutadelconductorViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="RegistrosViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroBaseViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaRegistrosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelselectedRegistrosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedRegistrosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelRegistrosViewModelRegistrosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/registrosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="incidencia" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="lugar" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ListapreciosViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroBaseViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaListapreciosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelselectedListapreciosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedListapreciosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroBaseViewModelListapreciosViewModelListapreciosViewModel"
+              eType="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"
+              eOpposite="#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listapreciosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta1" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta2" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="pecio" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+      </eSubpackages>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

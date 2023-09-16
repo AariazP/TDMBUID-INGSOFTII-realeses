@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.impl.NombredelconductorViewModelImpl"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.NombredelconductorViewModel"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javafx.util.converter.LocalDateTimeStringConverter"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="java.awt.ItemSelectable"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.TableItem"/>
+<fullyQualifiedTypeName name="cootracir.domain.impl.CajeroImpl"/>
+<fullyQualifiedTypeName name="cootracir.domain.Liquidacion"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.ResourceSet"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.util.URI"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceSetImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.xml.type.internal.DataValue.URI"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
+<fullyQualifiedTypeName name="cootracir.domain.impl.LiquidacionImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.KeyListener"/>
+<fullyQualifiedTypeName name="cootracir.domain.Conductor"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
+<fullyQualifiedTypeName name="cootracir.domain.Ruta"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="cootracir.domain.Cajero"/>
+<fullyQualifiedTypeName name="cootracir.domain.main1.Bus"/>
+<fullyQualifiedTypeName name="cootracir.domain.Bus"/>
+<fullyQualifiedTypeName name="cootracir.domain.impl.ConductorImpl"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.ContenedorBusquedaViewModel"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.ContenedorInformaciongeneralViewModel"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.impl.RegistrosViewModelImpl"/>
+<fullyQualifiedTypeName name="cootracir.domain.DetalleRegistro"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="com.ibm.icu.util.BytesTrie.Iterator"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.FiltrarrutasViewModel"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.impl.FiltrarrutasViewModelImpl"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.ListapreciosViewModel"/>
+<fullyQualifiedTypeName name="cootracir.ui.viewmodels.contenedorregistrobaseviewmodel.impl.ListapreciosViewModelImpl"/>
+</qualifiedTypeNameHistroy>

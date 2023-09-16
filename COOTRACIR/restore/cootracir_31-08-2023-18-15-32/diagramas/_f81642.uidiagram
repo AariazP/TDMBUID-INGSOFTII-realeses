@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_5K8JcEhkEe6HROGJAox8ng" name="ViewPart: RegistroBase">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_5K-lsEhkEe6HROGJAox8ng" name="RegistroBase" nameVar="RegistroBase" type="View Modal" font="Segoe UI" width="204" height="299" positionX="196" positionY="14" idWidget="_5K5tMEhkEe6HROGJAox8ng" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_5K-lsUhkEe6HROGJAox8ng" name="viewPartLoadedAction" id="_5K5tMUhkEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_5K-lskhkEe6HROGJAox8ng" name="constructorNameViewPart" id="_5K6UQEhkEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_5K-ls0hkEe6HROGJAox8ng" name="reboot" id="_5K6UQUhkEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_5K-ltEhkEe6HROGJAox8ng" name="syncModel" id="_5K6UQkhkEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_5Lp7IEhkEe6HROGJAox8ng" type="MetamodelodataformUIdiagram" element="_5K8JcEhkEe6HROGJAox8ng" name="ViewPart: RegistroBase" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_5TiEwEhkEe6HROGJAox8ng" type="2001" element="_5K-lsEhkEe6HROGJAox8ng">
+      <children xmi:type="notation:DecorationNode" xmi:id="_5TjS4EhkEe6HROGJAox8ng" type="5028"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_5TjS4UhkEe6HROGJAox8ng" type="7001"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_5TiEwUhkEe6HROGJAox8ng"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_5TiEwkhkEe6HROGJAox8ng" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_5TiEw0hkEe6HROGJAox8ng"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5TiExEhkEe6HROGJAox8ng" x="196" y="14"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_5Lp7IUhkEe6HROGJAox8ng"/>
+  </notation:Diagram>
+</xmi:XMI>

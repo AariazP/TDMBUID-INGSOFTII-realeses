@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cootracir/src" modelPluginID="cootracir" modelName="Model" complianceLevel="6.0" copyrightFields="false" editPluginID="cootracir.edit" editorPluginID="cootracir.editor">
+  <foreignModel>cootracir.ecore</foreignModel>
+  <genPackages prefix="cootracir" disposableProviderFactory="true">
+    <ecorePackage href="cootracir.ecore#/"/>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//String"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//EBooleanObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//EDoubleObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//EIntegerObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//EList"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//EChar"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cootracir.ecore#//ArrayList"/>
+    </genDataTypes>
+    <genClasses>
+      <ecoreClass href="cootracir.ecore#//ModelFactory"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ModelFactory/theDomain"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ModelFactory/theUI"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cootracir.ecore#//ModelFactory/cargar"/>
+        <genParameters>
+          <ecoreParameter href="cootracir.ecore#//ModelFactory/cargar/ruta"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cootracir.ecore#//ModelFactory/implementarModelo"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cootracir.ecore#//ModelFactory/salvar"/>
+        <genParameters>
+          <ecoreParameter href="cootracir.ecore#//ModelFactory/salvar/ruta"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Domain" disposableProviderFactory="true">
+      <ecorePackage href="cootracir.ecore#//domain"/>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Analista"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/direccion"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/email"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/estado"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/nombre"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Analista/telefono"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Analista/factoryGestionHumana"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Analista/lstConductores"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Bus"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Bus/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Bus/estado"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Bus/numeroPuestos"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Bus/factoryGestionInventario"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Bus/lstLiquidacion"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Bus/conductor"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Bus/registrador"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Bus/lstRuta"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Cajero"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/nombre"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/edad"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/telefono"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/dineroRecibido"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/email"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Cajero/estado"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Cajero/factoryGestionHumana"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Cajero/lstConductores"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Cajero/lstLiquidaciones"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Conductor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/analista"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/cajero"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Conductor/nombre"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Conductor/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Conductor/telefono"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Conductor/email"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Conductor/estado"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/bus"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/factoryGestionHumana"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/lstRegistrador"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/lstBus"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Conductor/lstLiquidaciones"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/DetalleRegistro"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/DetalleRegistro/lugar"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/DetalleRegistro/hora"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/DetalleRegistro/incidencia"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/DetalleRegistro/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/DetalleRegistro/estado"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/DetalleRegistro/registrador"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/DetalleRegistro/factoryGestionInventario"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/DetalleRegistro/ruta"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Domain"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Domain/theModelFactory"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Domain/factoryGestionHumana"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Domain/factoryGestionInventario"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Domain/theUI"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="cootracir.ecore#//domain/Domain/implementarModelo"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/FactoryGestionHumana"/>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionHumana/lstAnalistas"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionHumana/lstCajeros"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionHumana/lstConductores"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/FactoryGestionHumana/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/FactoryGestionHumana/estado"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionHumana/domain"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/FactoryGestionInventario"/>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/lstBuses"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/lstDetalleRegistro"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/FactoryGestionInventario/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/FactoryGestionInventario/estado"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/domain"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/lstLiquidaciones"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/lstRegistrador"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/FactoryGestionInventario/lstRuta"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Liquidacion"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Liquidacion/lstBus"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Liquidacion/cajero"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Liquidacion/conductor"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Liquidacion/costes"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Liquidacion/estado"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Liquidacion/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Liquidacion/valorLiquidacion"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Liquidacion/factoryGestionInventario"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Registrador"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Registrador/lstDetalleRegistros"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Registrador/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Registrador/estado"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Registrador/bus"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Registrador/factoryGestionInventario"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//domain/Ruta"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Ruta/lstDetalleRegistro"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Ruta/precioRuta"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Ruta/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Ruta/estado"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/Ruta/nombre"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Ruta/bus"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/Ruta/factoryGestionInventario"/>
+        </genFeatures>
+      </genClasses>
+      <nestedGenPackages prefix="Main1" disposableProviderFactory="true">
+        <ecorePackage href="cootracir.ecore#//domain/main1"/>
+        <genClasses>
+          <ecoreClass href="cootracir.ecore#//domain/main1/Bus"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/Bus/lstConductor"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Bus/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Bus/numeroPuestos"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Bus/estado"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/Bus/lstRuta"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="cootracir.ecore#//domain/main1/Ruta"/>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Ruta/precioRuta"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Ruta/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Ruta/estado"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/Ruta/lstBus"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="cootracir.ecore#//domain/main1/Registrador"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/Registrador/lstConductor"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Registrador/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/Registrador/estado"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/Registrador/lstDetalleRegistro"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="cootracir.ecore#//domain/main1/DetalleRegistro"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//domain/main1/DetalleRegistro/lstRegistrador"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/DetalleRegistro/lugar"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/DetalleRegistro/hora"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/DetalleRegistro/incidencias"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/DetalleRegistro/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//domain/main1/DetalleRegistro/estado"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Main2" disposableProviderFactory="true">
+        <ecorePackage href="cootracir.ecore#//domain/main2"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Ui" disposableProviderFactory="true">
+      <ecorePackage href="cootracir.ecore#//ui"/>
+      <genClasses>
+        <ecoreClass href="cootracir.ecore#//ui/UI"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/UI/theModelFactory"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/UI/theDomain"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/UI/lstViewModels"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/UI/theContenedorRegistroBaseViewModel"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="cootracir.ecore#//ui/UI/implementarModelo"/>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Viewmodels" disposableProviderFactory="true">
+        <ecorePackage href="cootracir.ecore#//ui/viewmodels"/>
+        <genClasses image="false">
+          <ecoreClass href="cootracir.ecore#//ui/viewmodels/ViewModel"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/ViewModel/theUI"/>
+          </genFeatures>
+        </genClasses>
+        <nestedGenPackages prefix="Contenedorregistrobaseviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel"/>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/notificacion"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/txtFiltrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaFiltrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/filtrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedFiltrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/theInformaciongeneral"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/theBusqueda"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaRegistrosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedRegistrosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/registrosViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listaListapreciosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/selectedListapreciosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorRegistroBaseViewModel/listapreciosViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/ownedByContenedorRegistroBaseViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/theContenedorRegistroBaseViewModelFiltrarrutasViewModelFiltrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/theContenedorRegistroBaseViewModelselectedFiltrarrutasViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/FiltrarrutasViewModel/name"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/ownedByContenedorRegistroBaseViewModelTheInformaciongeneral"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/nombre"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/hora"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/ruta"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorInformaciongeneralViewModel/fecha"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/ownedByContenedorRegistroBaseViewModelTheBusqueda"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/txtNombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/txtRutadelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/listaNombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/nombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/selectedNombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/listaRutadelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/rutadelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ContenedorBusquedaViewModel/selectedRutadelconductorViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/ownedContenedorBusquedaViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/theContenedorBusquedaViewModelNombredelconductorViewModelNombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/theContenedorBusquedaViewModelselectedNombredelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/NombredelconductorViewModel/name"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/ownedContenedorBusquedaViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/theContenedorBusquedaViewModelRutadelconductorViewModelRutadelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/theContenedorBusquedaViewModelselectedRutadelconductorViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RutadelconductorViewModel/name"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/ownedByContenedorRegistroBaseViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/theContenedorRegistroBaseViewModelselectedRegistrosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/theContenedorRegistroBaseViewModelRegistrosViewModelRegistrosViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/id"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/hora"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/estado"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/incidencia"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/RegistrosViewModel/lugar"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/ownedByContenedorRegistroBaseViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/theContenedorRegistroBaseViewModelselectedListapreciosViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/theContenedorRegistroBaseViewModelListapreciosViewModelListapreciosViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/ruta1"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/ruta2"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="cootracir.ecore#//ui/viewmodels/contenedorregistrobaseviewmodel/ListapreciosViewModel/pecio"/>
+            </genFeatures>
+          </genClasses>
+        </nestedGenPackages>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

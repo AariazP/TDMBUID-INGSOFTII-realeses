@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
+  <tooldataform.ui:UI_Diagram xmi:id="_EdL5wEhlEe6HROGJAox8ng" name="ViewPart: RegistroBase">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_EdNH4EhlEe6HROGJAox8ng" name="RegistroBase" nameVar="RegistroBase" type="View Modal" font="Segoe UI" width="200" height="300" positionX="0" positionY="0" idWidget="_EdFMEEhlEe6HROGJAox8ng" textColor="0" textSize="9" textStyle="false">
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_EdNH4UhlEe6HROGJAox8ng" name="viewPartLoadedAction" id="_EdFzIEhlEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_EdNH4khlEe6HROGJAox8ng" name="constructorNameViewPart" id="_EdGaMEhlEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_EdNH40hlEe6HROGJAox8ng" name="reboot" id="_EdGaMUhlEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+      <listModelElementCore xmi:type="tooldataform.pmoo:Metodo" xmi:id="_EdNH5EhlEe6HROGJAox8ng" name="syncModel" id="_EdGaMkhlEe6HROGJAox8ng" typeElement="Operation" urlIcon="" visible="true"/>
+    </theUserInterface>
+  </tooldataform.ui:UI_Diagram>
+  <notation:Diagram xmi:id="_Edqa4EhlEe6HROGJAox8ng" type="MetamodelodataformUIdiagram" element="_EdL5wEhlEe6HROGJAox8ng" name="ViewPart: RegistroBase" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Edqa4UhlEe6HROGJAox8ng"/>
+  </notation:Diagram>
+</xmi:XMI>

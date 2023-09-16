@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cootracir:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cootracir="http:///cootracir.ecore">
+  <theDomain theUI="//@theUI">
+    <factoryGestionHumana>
+      <lstAnalistas direccion="cra 56 # 12-28" email="julice@gmail.com" estado="activo" id="1" nombre="Julio Cesar" telefono="3127653452" lstConductores="//@theDomain/@factoryGestionHumana/@lstConductores.0"/>
+      <lstCajeros nombre="carlos ariza argueta" id="1" edad="25" telefono="32323432" dineroRecibido="0" email="carlos.aa@gmail.com" estado="activo">
+        <lstConductores href="#//@theDomain/@factoryGestionHumana/@lstConductores.0"/>
+        <lstConductores href="#//@theDomain/@factoryGestionHumana/@lstConductores.0"/>
+        <lstLiquidaciones href="mi_recurso.xmi#/"/>
+        <lstLiquidaciones href="mi_recurso.xmi#/"/>
+      </lstCajeros>
+      <lstConductores analista="//@theDomain/@factoryGestionHumana/@lstAnalistas.0" cajero="//@theDomain/@factoryGestionHumana/@lstCajeros.0" nombre="juan camilo" id="1" telefono="323214324" email="juancamilo@gmail.com" estado="activo" bus="//@theDomain/@factoryGestionInventario/@lstBuses.0"/>
+      <lstConductores nombre="alejandro" id="2" telefono="3214788990" email="juancamilo@gmail.com" estado="activo"/>
+    </factoryGestionHumana>
+    <factoryGestionInventario>
+      <lstBuses id="1" estado="activo" numeroPuestos="16" conductor="//@theDomain/@factoryGestionHumana/@lstConductores.0" registrador="//@theDomain/@factoryGestionInventario/@lstRegistrador.0" lstRuta="//@theDomain/@factoryGestionInventario/@lstRuta.0"/>
+      <lstDetalleRegistro lugar="ARMENIA" hora="11:31" incidencia="NINGUNA" id="1" estado="NUEVO" registrador="//@theDomain/@factoryGestionInventario/@lstRegistrador.0" ruta="//@theDomain/@factoryGestionInventario/@lstRuta.0"/>
+      <lstRegistrador lstDetalleRegistros="//@theDomain/@factoryGestionInventario/@lstDetalleRegistro.0" id="1" estado="activo" bus="//@theDomain/@factoryGestionInventario/@lstBuses.0"/>
+      <lstRuta lstDetalleRegistro="//@theDomain/@factoryGestionInventario/@lstDetalleRegistro.0" precioRuta="3500" id="1" estado="disponible" nombre="Circasia-Armenia" bus="//@theDomain/@factoryGestionInventario/@lstBuses.0"/>
+    </factoryGestionInventario>
+  </theDomain>
+  <theUI theDomain="//@theDomain" lstViewModels="//@theUI/@theContenedorRegistroBaseViewModel //@theUI/@theContenedorRegistroBaseViewModel/@theBusqueda //@theUI/@theContenedorRegistroBaseViewModel/@theInformaciongeneral">
+    <theContenedorRegistroBaseViewModel theUI="//@theUI">
+      <theInformaciongeneral theUI="//@theUI"/>
+      <theBusqueda theUI="//@theUI"/>
+      <listaRegistrosViewModel/>
+    </theContenedorRegistroBaseViewModel>
+  </theUI>
+</cootracir:ModelFactory>
